@@ -41,7 +41,7 @@ class TestParser:
                                   })
             except Exception as e:
                 logger.info(e)
-        if self.data is not 0:
+        if len(self.data) is not 0:
             json_as_result = json.dumps(self.data, indent=4, sort_keys=True, ensure_ascii=False)
             print(json_as_result)
             with open('export_file.json', 'w', encoding='utf8') as export_file:
